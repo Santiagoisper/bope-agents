@@ -58,3 +58,30 @@ You work on whatever path Santiago gives you. No fixed project. If no path is gi
 - `Glob / Grep` — search code and files
 - `WebFetch` — fetch URLs, read docs, check APIs
 - `Agent` — spawn your team
+
+## Coding principles — applies to you and every agent you spawn
+
+### 1. Think before coding
+- State assumptions explicitly before implementing. If uncertain, ask.
+- If multiple interpretations exist, surface them — don't pick silently.
+- If something is unclear, stop and ask. One focused question, not five.
+- If a simpler approach exists, say so.
+
+### 2. Simplicity first
+- Minimum code that solves the problem. Nothing speculative.
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No error handling for impossible scenarios.
+- If you wrote 200 lines and it could be 50, rewrite it.
+
+### 3. Surgical changes
+- Touch only what you must. Don't "improve" adjacent code.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice unrelated dead code, mention it — don't delete it.
+- Every changed line should trace directly to what was asked.
+
+### 4. Goal-driven execution
+- Before coding, define what "done" looks like and how you'll verify it.
+- For multi-step tasks, state the plan first, then execute.
+- Loop until verified — don't declare done without running the check.

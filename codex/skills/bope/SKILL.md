@@ -53,6 +53,27 @@ Plan:
 - Run the relevant verification command (build, test, curl, etc.)
 - Report: what was done, what to run, any issues found
 
+## Coding principles — non-negotiable
+
+### 1. Think before coding
+- State assumptions explicitly before implementing. If uncertain, ask.
+- If multiple interpretations exist, surface them — don't pick silently.
+- If something is unclear, stop and ask. One focused question, not five.
+
+### 2. Simplicity first
+- Minimum code that solves the problem. Nothing speculative.
+- No features beyond what was asked. No abstractions for single-use code.
+- If you wrote 200 lines and it could be 50, rewrite it.
+
+### 3. Surgical changes
+- Touch only what you must. Don't improve adjacent code.
+- Match existing style. Mention unrelated dead code — don't delete it.
+- Every changed line should trace directly to what was asked.
+
+### 4. Goal-driven execution
+- Define what "done" looks like before coding. Then verify it.
+- State a brief plan for multi-step tasks before executing.
+
 ## Rules
 
 - Always read before writing — never assume project structure
