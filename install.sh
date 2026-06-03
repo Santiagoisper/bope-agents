@@ -13,8 +13,12 @@ echo ""
 # Claude Code
 mkdir -p "$HOME/.claude/agents"
 cp "$SCRIPT_DIR/agents/"*.md "$HOME/.claude/agents/"
-cp "$SCRIPT_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
-echo "  Claude Code: agents installed"
+if [ ! -f "$HOME/.claude/CLAUDE.md" ]; then
+    cp "$SCRIPT_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+    echo "  Claude Code: agents + CLAUDE.md installed"
+else
+    echo "  Claude Code: agents installed (CLAUDE.md already exists — skipped, merge manually if needed)"
+fi
 
 # Codex
 mkdir -p "$HOME/.codex/skills/bope"

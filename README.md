@@ -19,15 +19,15 @@
 
 ### Mac / Linux
 ```bash
-git clone https://github.com/Santiagoisper/bope-agents.git
-cd bope-agents
+git clone https://github.com/Santiagoisper/Bope-agents.git
+cd Bope-agents
 bash install.sh
 ```
 
 ### Windows (PowerShell)
 ```powershell
-git clone https://github.com/Santiagoisper/bope-agents.git
-cd bope-agents
+git clone https://github.com/Santiagoisper/Bope-agents.git
+cd Bope-agents
 .\install.ps1
 ```
 

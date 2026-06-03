@@ -13,8 +13,12 @@ $ClaudeAgents = "$env:USERPROFILE\.claude\agents"
 $ClaudeRoot   = "$env:USERPROFILE\.claude"
 New-Item -ItemType Directory -Force -Path $ClaudeAgents | Out-Null
 Copy-Item "$ScriptDir\agents\*.md" "$ClaudeAgents\" -Force
-Copy-Item "$ScriptDir\claude\CLAUDE.md" "$ClaudeRoot\CLAUDE.md" -Force
-Write-Host "  Claude Code: agents installed"
+if (-not (Test-Path "$ClaudeRoot\CLAUDE.md")) {
+    Copy-Item "$ScriptDir\claude\CLAUDE.md" "$ClaudeRoot\CLAUDE.md" -Force
+    Write-Host "  Claude Code: agents + CLAUDE.md installed"
+} else {
+    Write-Host "  Claude Code: agents installed (CLAUDE.md already exists — skipped, merge manually if needed)"
+}
 
 # Codex
 $CodexSkill = "$env:USERPROFILE\.codex\skills\bope"
